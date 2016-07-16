@@ -19,12 +19,15 @@ class TestMyModule(unittest.TestCase):
         n1 = 1
         n2 = 2
         expected_value = n1 + n2
-        self.assertNotEqual(add_integers(n1, n2), expected_value)
+        self.assertNotEqual(
+            add_integers(n1, n2),
+            expected_value
+        )
         pass
         
     def test_assert_int_int_raises_no_error(self):
         for n in range (-100, 101):
-            self.assertTrue(assert_int(1))
+            self.assertTrue(assert_int(n))
 
     def test_assert_int_non_int_raises_typeerror(self):
         pass
